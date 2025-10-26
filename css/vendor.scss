@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'app.scss';
+
+.form-input,
+.form-multiselect,
+.form-select,
+.form-textarea {
+    border-color: #cccccc;
+}

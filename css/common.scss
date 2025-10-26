@@ -1,0 +1,100 @@
+.reset * {
+    all: revert;
+}
+
+.pause-spinner {
+    animation-play-state: paused;
+}
+
+.page {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol,
+    li {
+        all: revert;
+    }
+    &.ql-editor {
+        white-space: unset;
+    }
+}
+
+.groot-theme div.in-app-page #blogs .bg-gray-100 {
+    background: #fff;
+}
+
+.adsbygoogle {
+    min-width: 250px;
+}
+
+.groot-theme,
+.nebula-theme {
+    .ads-two,
+    .ads-three {
+        .adsbygoogle {
+            min-width: 200px;
+        }
+    }
+}
+
+html {
+    :not(h1, h2, h3, h4, h5, h6) {
+        font-family: var(--body-font);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--head-font) !important;
+        & > * {
+            font-family: var(--head-font) !important;
+        }
+    }
+}
+
+.has-tooltip .tooltip {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s;
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.75em;
+    border-radius: 0.5em;
+}
+
+.has-tooltip .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    transform: rotate(180deg);
+}
+
+.has-tooltip:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+.has-tooltip.relative .tooltip {
+    top: -2em;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 12px;
+    }
+}
